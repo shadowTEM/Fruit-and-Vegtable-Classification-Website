@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body with background image and overlay */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    position: relative;
+    background: url('../Images/Background.jpg') no-repeat center center fixed; /* Corrected path */
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #4caf50;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+/* Image Upload Section */
+.upload-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.upload-box {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px dashed #4caf50;
+    border-radius: 10px;
+    text-align: center;
+    width: 700px;
+}
+
+.upload-box p {
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #ddd;
+}
+
+#imageUpload {
+    display: block;
+    margin: 20px auto;
+}
+
+#predictButton {
+    padding: 10px 30px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#predictButton:hover {
+    background-color: #45a049;
+}
+
+/* Image Preview Style */
+#imagePreview {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #ddd;
+}
